@@ -78,16 +78,20 @@ These AZs are separate from each other and are isolated from disasters
 So something happens to ap-southeast-2a will not cascade into 2b or 2c  
 These AZs are connected via high bandwith ultra low latency and all together form a region  
 AWS has 216 points of presence (205 edge locations & 11 regional caches) in 84 cities across 42 countries  
+  
 Some AWS Services  
 IAM: Identity and Access Management  
 DNS Service: Route 5  
 Content Delivery Network: Cloud Front   
 WAF: Web Application Firewall  
+  
 Most AWS services are region scoped  
+  
 Infrastucture as a Service (Amazon EC2)  
 Platform as a service (Elastic Beanstalk)  
 Function as a service (Lambda)  
 Software as  service (Rekognition)  
+  
 There is a region table to check if service is available in your region  
 If after choosing a service, the region changes to global, it means its available the same to all regions  
 If it doesn't change, its region specific... most are region specific  
