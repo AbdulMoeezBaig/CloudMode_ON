@@ -98,6 +98,17 @@ If it doesn't change, its region specific... most are region specific
 
 ### Section 4
 
-
+### IAM Service
+Identity and management global service  
+root account created by default shouldn't be used / shared  
+users should be created within for the organization and should be grouped  
+1 user = 1 person  
+Group: Developers, Group: Operations, ... ... Groups can only contain users, and not other groups  
+Users can belong to multiple groups, or no groups at all (not good practice)  
+We make groups so we can give permissions  
+Users or groups can be assigned JSON documents called policies  
+This is something like..we "allow" usesrs to use service "EC2:Service Command" on it  
+We allow users to use some services ... i.e. define permissions  
+We use the least privilege principle (don't give more permissions than a user needs)  
 
 
