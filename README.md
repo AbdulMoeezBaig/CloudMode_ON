@@ -33,3 +33,25 @@ Skill level: Beginner Level
 https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/learn/quiz/4726082/results?expanded=808896788#overview  
 Exams: 6  
 Skill level: Beginner Level
+
+
+
+
+## ===============================================================
+## Ultimate AWS Certified Solutions Architect Associate SAA-C03  
+https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014?start=15#overview  
+Video: 27 total hours  
+Skill level: All Levels  
+
+### Section 1:  
+AWS = Amazon Web Services (Cloud Provider)  
+On Demand + Easy Scalability  
+AWS = Sphagetti Bowl, all services are linked  
+After this course, most learners move on to AWS Certified Developer or AWS Certified SysOps Administrator.   
+
+### Section 2:  
+Resources  
+
+### Section 3:
+Gartner Magic Quadrant: Magic Quadrant is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants.  
+
