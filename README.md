@@ -37,7 +37,7 @@ Skill level: Beginner Level
 
 
 
-## ===============================================================
+## =============================================================
 ## Ultimate AWS Certified Solutions Architect Associate SAA-C03  
 https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014?start=15#overview  
 Video: 27 total hours  
@@ -54,4 +54,46 @@ Resources
 
 ### Section 3:
 Gartner Magic Quadrant: Magic Quadrant is a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants.  
+AWS = 47% of the market in 47% followed by Google (22%) + it has 1M + active users  
+Uses: Every company has a usecase for the cloud  
+Example: Enterprise IT, Backup & Storage, Big Data Analytics, Website Hosting, Mobile and Social Apps, Gaming Servers  
+AWS Global Infrared Structure: AWS Regions, AWS Availability Zones, AWS Data Centers, AWS Edge Locations / Points of Presence  
+https://aws.amazon.com/about-aws/global-infrastructure/regions_az/  
+Regions all around the world, each region has a name  
+AWS are region scoped, 
+
+Question: How do you choose an AWS region?  
+Factors: 
+Compliance (Government wants data to stay local)  
+Latency (If users in America, stay in america or else lag)  
+Available Services (New services and features aren't available in every region so ensure that where you deploy, does have the service)  
+Pricing (differs from region to region so it depends)  
+
+Availability Zones (AZ)
+Each region has many availability zones (min:3, max 6)  
+Example: AWS Region Sydney has 3 availability zones named  
+ap-southeast-2a, ap-southeast-2b, ap-southeast-2c  
+Each zone has data centers, networking, connectivity  
+These AZs are separate from each other and are isolated from disasters  
+So something happens to ap-southeast-2a will not cascade into 2b or 2c  
+These AZs are connected via high bandwith ultra low latency and all together form a region  
+AWS has 216 points of presence (205 edge locations & 11 regional caches) in 84 cities across 42 countries  
+Some AWS Services  
+IAM: Identity and Access Management  
+DNS Service: Route 5  
+Content Delivery Network: Cloud Front   
+WAF: Web Application Firewall  
+Most AWS services are region scoped  
+Infrastucture as a Service (Amazon EC2)  
+Platform as a service (Elastic Beanstalk)  
+Function as a service (Lambda)  
+Software as  service (Rekognition)  
+There is a region table to check if service is available in your region  
+If after choosing a service, the region changes to global, it means its available the same to all regions  
+If it doesn't change, its region specific... most are region specific  
+
+### Section 4
+
+
+
 
