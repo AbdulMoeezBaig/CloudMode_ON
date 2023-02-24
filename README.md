@@ -37,7 +37,7 @@ Skill level: Beginner Level
 
 
 
-## =============================================================
+## ============================================================
 ## Ultimate AWS Certified Solutions Architect Associate SAA-C03  
 https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/13528014?start=15#overview  
 Video: 27 total hours  
