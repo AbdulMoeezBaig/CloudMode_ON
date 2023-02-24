@@ -111,4 +111,18 @@ This is something like..we "allow" usesrs to use service "EC2:Service Command" o
 We allow users to use some services ... i.e. define permissions  
 We use the least privilege principle (don't give more permissions than a user needs)  
 
+IAM = Global  
+Users -> add users (dont use root account)  
+U know ur using root because top right shows root id and not user id  
+You can create user, define a password, make him change password on next login and so  
+Tags are just for comments / additional information.  
+Now that user is created, possible to email the instructions or download a .CSV  
+User name -> click user -> shows permissions that he has and if those permissions come from a group  
+IMuser is created by / from the original root user and the username on top right differs. IMuser (sub-user)'s username is such as username @ rootuser's id such aa Account ID: 5787-4025-1387  
+IAM user: AbdulJunior  
+or AbdulJunior@578740251387  
+
+### End of Video 12
+
+
 
