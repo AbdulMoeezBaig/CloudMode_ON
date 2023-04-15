@@ -130,20 +130,21 @@ inline policies are for individuals that maybe don't belong to a group
 policy structure  
 {  
 "Version":"2023-04-15",  
-"Id":"S3-Account-Permissions"  
+"Id":"S3-Account-Permissions"   (Identifier for policy)  
 "Statement": (square bracket open)    
 {  
-"Sid":"1",  
-"Effect": "Allow", 
+"Sid":"1",  (statement ID identifier)(optional)   
+"Effect": "Allow", (allow / deny)  
 "Principal":  {  
-"AWS": ["arn:aws:iam::1231231231:root"]  
+"AWS": ["arn:aws:iam::1231231231:root"]  (account / user / role to apply policy to)  
 },  
 "Action": (square bracket open)  
-"s3:GetObject",   
+"s3:GetObject",(list of actions this policy allows / denies)     
 "s3:PutObject"  
 (square bracket close),  
-"Resource": "arn:aws::s3:::mybucket/"
-}
+"Resource": "arn:aws::s3:::mybucket/" 
+}  
 square bracket close  
-close close
+close close  
+
 
