@@ -109,7 +109,7 @@ We make groups so we can give permissions
 Users or groups can be assigned JSON documents called policies  
 This is something like..we "allow" usesrs to use service "EC2:Service Command" on it  
 We allow users to use some services ... i.e. define permissions  
-We use the least privilege principle (don't give more permissions than a user needs)  
+We use the __least privilege principle__ (don't give more permissions than a user needs)  
 
 IAM = Global  
 Users -> add users (dont use root account)  
