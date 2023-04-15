@@ -124,5 +124,26 @@ or AbdulJunior@578740251387
 
 ### End of Video 12
 
+IAM Policies  
+inline policies are for individuals that maybe don't belong to a group  
 
+policy structure  
+{  
+"Version":"2023-04-15",  
+"Id":"S3-Account-Permissions"  
+"Statement": (square bracket open)    
+{  
+"Sid":"1",  
+"Effect": "Allow", 
+"Principal":  {  
+"AWS": ["arn:aws:iam::1231231231:root"]  
+},  
+"Action": (square bracket open)  
+"s3:GetObject",   
+"s3:PutObject"  
+(square bracket close),  
+"Resource": "arn:aws::s3:::mybucket/"
+}
+square bracket close  
+close close
 
