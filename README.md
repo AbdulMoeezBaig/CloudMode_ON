@@ -150,7 +150,7 @@ close close
 #### Protection  
 Password Policy ->1 , Multi Factor Authentication(MFA) ->2  
 Minimum password length, specific character type  
-Allow users to change or not change their own passwords or password expiration  
+Allow users to change or not change their own passwords or password expiration   
 Prevent password reuse   
 MFA = password u own + device u own  
 Virtual MFA = google auth , authy, (authy can be used on multiple devices)  
