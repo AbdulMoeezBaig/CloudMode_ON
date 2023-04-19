@@ -166,4 +166,42 @@ access keys are secret like password
 Access key ID: username  
 Secret Access Key: password  
 
+Every command in AWS CLI starts from AWS  
+from CLI, with access keys, you can use AWS's API  
+CLI can be used to manage resources and automate tasks  
+
+SDK -> Software Development Kit  
+set of library (SDK is language specific)  
+SDK is not something you use with your termnimal, it is something that you embed within your application  
+Javascript, python, php, .net, ruby, go, node js, C++  
+Also supports mobile SDK,  IoT device SDK (arduino, embedded c)  
+
+## AWS CLI CONFIGURE
+open terminal  
+type "aws configure"  
+type access key, then type secret key, then type region u want to choose,  then enter (none) as output, and AWS CLI is configured  
+aws iam list-users  
+AWS cloudshell alternative to terminal (cloudshell is terminal inside AWS on the cloud)  
+in the cloudshell, u have a full repository, which means that u have place to save files and all files will retain if you restart the cloudshell  
+can also download and upload file in cloud  
+can have more tabs, can split tabs  
+cloudshell doesn't need configuration as its active in the account its opened in (as i believe)  
+
+## IAM ROLES Video 24
+we assign permissions to AWS services using IAM roles  
+EC2 instance = virtual server  
+Common roles: 1- EC2 instance roles, 2- Lambda function roles, 3- Roles for cloud formation  
+
+## IAM Credentials Report  
+a report that lists all account's users and status of their credentials  
+IAM access advisor (at user level), shows service permissions granted to user and when these services were last accessed (helps with least priviledge principal)  
+Access advisor in users shows when a service was last used and shows what permissed granted or alloewd to use that service  
+
+
+### Section 5
+
+### EC2 Fundamentals  
+AWS budget management helps limiting / debugging where money going  
+u can set zero spend budget (that informs when all free tiiers are getting exhausted), monthly cost budget, daily savings plan coverage budget, can set buddget to 1$   
+notification gets sent to emails specified  
 
