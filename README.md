@@ -210,15 +210,51 @@ EC2 = Elastic Compute Cloud = Infrastructure like a cloud
 Something very cool being widely used everywhere  
 EC2 is not just one service, composed of many things  
 mainly consists of  
-rent virtual machines (EC2) called instances  
-storing data on virtual devices (EBS)  
-distribute load across machines (ELB)  
-scale service using auto-scaling group (ASG)  
+* rent virtual machines (EC2) called instances  
+* storing data on virtual devices (EBS)  
+* distribute load across machines (ELB)  
+* scale service using auto-scaling group (ASG)  
 EC2 is fundamental .. important to know  
 
 EC2 sizing and configuration options include: 
 * OS for EC2 instances -> Linux, Windows and Mac OS  
 * How much computer power and cores (CPU)  
-* 
+* How much RAM  
+* How much storage space  
+  * Network attached (EBS & EFS)  
+  * hardware (EC2 instance store)  
+* Network card: speed of card, Public IP address
+* Firewall rules:security group  
+* Bootstrap script (configure at first launch): EC2 user data  
 
-~ renting virtual machines 
+You bootstrap instances using EC2 user data script  
+Bootstrapping = launching commands when a machine starts so a BS script runs only once at the instance first start  
+you automate tasks using EC2 user data script such as  
+* installing update
+* installing software 
+* downloading common files from internet
+* anything u can think of
+
+EC2 data script runs with root user so all commands will have psudo rights  
+for EC2, u choose a kind of instance like (t2.micro, t2xlarge, or m5.8xlarge etc, each codes with its own vCPU, Mem, storage, network performance and EBS bandwidth)  
+
+Hands on, EC2 experience  
+
+Launching an instance: 
+* Name Tag : anything 
+* Application and OS image (AMI)(Amazon Machine Image): Amazon Linux (but can choose others) 
+* Architecture 64x
+* Instance type: t2.micro (free) 
+* key pair: Not needed if using SSH utility for accessing, RSA = RSA encrypted private and public key, 
+* Windows 10 or higher -> .pem, less than windows 10 -> .ppk (putty) private key format 
+
+<---
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+-->
