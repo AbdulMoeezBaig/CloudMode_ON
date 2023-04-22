@@ -260,3 +260,37 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 -->
 
 When u stop and start an instance, the public ip changes, private does not change, so u need to the new public ip to visit the website  
+different types of EC2 instances : https://aws.amazon.com/ec2/instance-types/  
+each type of instance has different families.. e.g. general purpose has mac, t4g, t3 ....  
+m5.2xlarge, m = instance class, 5 = generation (hardware based), 2x large = size within the instance class  
+General purpose instances are great for diversity of workloads such as web servers or code repo  
+Balance between -Computer, -Memory, -Networking  
+Computer Optimized instances are great for intensive tasks i.e. 
+* batch processing workloads, 
+* media transcoding, 
+* high performance web servers, 
+* high performance computing, 
+* scientific modeling and machine learning, 
+* dedicated gaming servers  
+normally all compute optimized servers start from C i.e. c5 c6 ..
+Memory optimized instances are great for large datasets processing and are great for 
+* high performance relational, non relational  
+* distributed web scale cache stores  
+* in-memory databases optimized for BI (business intelligence)
+* applications performing real time processing of big unstructured data 
+Normally start from R, X Z...  
+Store optimized instances are great for storage intensive tasks that require high sequential read and write access to large data sets  
+* high frequency online transaction (OLTP) systems
+* relational and nosql databases
+* cache for inmemory databases (Redis)  
+* data warehousing applications 
+* distributed file systems 
+* they normally start with I, D or H1
+instances.vantage.sh  Instances comparison website  
+
+### Security Groups
+* fundamental of network security in AWS
+* they control how traffic flows
+* they only contain allow rules 
+* group rules can reference by IP or by security groups 
+* 
