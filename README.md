@@ -258,3 +258,5 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 -->
+
+When u stop and start an instance, the public ip changes, private does not change, so u need to the new public ip to visit the website  
