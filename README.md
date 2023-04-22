@@ -205,3 +205,22 @@ AWS budget management helps limiting / debugging where money going
 u can set zero spend budget (that informs when all free tiiers are getting exhausted), monthly cost budget, daily savings plan coverage budget, can set buddget to 1$   
 notification gets sent to emails specified  
 
+IAM users who are administrators, need a separate checkup so they can configure billing and cost management set (in root account settings, IAM user and role access to billing info)  
+
+
+EC2 = Elastic Compute Cloud = Infrastructure like a cloud  
+Something very cool being widely used everywhere  
+EC2 is not just one service, composed of many things  
+mainly consists of  
+rent virtual machines (EC2) called instances  
+storing data on virtual devices (EBS)  
+distribute load across machines (ELB)  
+scale service using auto-scaling group (ASG)  
+EC2 is fundamental .. important to know  
+
+EC2 sizing and configuration options include: 
+* OS for EC2 instances -> Linux, Windows and Mac OS  
+* How much computer power and cores (CPU)  
+* 
+
+~ renting virtual machines 
