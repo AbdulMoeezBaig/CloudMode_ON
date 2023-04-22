@@ -248,7 +248,7 @@ Launching an instance:
 * key pair: Not needed if using SSH utility for accessing, RSA = RSA encrypted private and public key, 
 * Windows 10 or higher -> .pem, less than windows 10 -> .ppk (putty) private key format 
 
-<---
+<!---
 #!/bin/bash
 # Use this for your user data (script from top to bottom)
 # install httpd (Linux 2 version)
