@@ -80,10 +80,10 @@ These AZs are connected via high bandwith ultra low latency and all together for
 AWS has 216 points of presence (205 edge locations & 11 regional caches) in 84 cities across 42 countries  
   
 Some AWS Services  
-IAM: Identity and Access Management  
-DNS Service: Route 5  
-Content Delivery Network: Cloud Front   
-WAF: Web Application Firewall  
+* IAM: Identity and Access Management  
+* DNS Service: Route 5  
+* Content Delivery Network: Cloud Front   
+* WAF: Web Application Firewall  
   
 Most AWS services are region scoped  
   
