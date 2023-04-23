@@ -289,8 +289,59 @@ Store optimized instances are great for storage intensive tasks that require hig
 instances.vantage.sh  Instances comparison website  
 
 ### Security Groups
+video 34: https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/learn/lecture/26098134#overview  
 * fundamental of network security in AWS
 * they control how traffic flows
 * they only contain allow rules 
 * group rules can reference by IP or by security groups 
+
+* security group = firewall on EC2 instances  
+they regulate
+  * access to ports 
+  * authorized IP ranges (IPv4 and IPv6)
+  * control of inbound network (from other to instance) 
+  * control of outbound network (from instance to other)
+
+* they can be attached to multiple EC2 instances  
+* an instance can have multiple security groups too 
+* they are locked down to a region / VPC combination (so if u switch to another region, u make another security group) 
+* Security groups live outside EC2, if traffic is blocked the EC2 instance wont even see it
+* good to maintain one separate security group for SSH access (because it is important and needs to be done correctly so better that an independent security group exists for it)
+* if the application is not accessible (time out) its a security group issue  
+* if application gives a 'connection refused' error, then its application error or its not launched
+* by default, all inbound traffic = blocked, outbound traffic = authorized 
+* Referencing other security groups inside a security group: https://imgur.com/a/A7Sbh1b , we do this so we don't need to think of IPs and so all the time  
+
+### Classic Ports
+* 22 = SSH (seccure shell) - login into a linux instance 
+* 21 = FTP (file transfer protocol) - upload files into a file share 
+* 22 = SFTP (secure file transfer protocol) - upload files using SSH 
+* 80 = HTTP (access unsecured websites)
+* 443 = HTTPS (access secured websites) 
+* 3389 = RDP (remote desktop protocl) - log into a windows instance 
+
+hands on...
+* go to EC2, start an instance
+* go to public IP (http:// IP) 
+* check if it works, if it does, go to EC2 / security groups
+* delete the http security group that allows access
+* reload the website, it wont work (you get time out)  
+* all time outs are causes of security groups 100% 
+* to make it work, add it back (http security rule) 
+
+### SSH Summary Table
+* SSH can be used on mac, linux, windows >=10 , not below 10
+* putty works on windows > 10 or < 10 or = 10
+* EC2 instance connect uses web browser to connect to EC2 instance connect, and can be used on any device but requires amazon NX2
+
+### SSHing into an EC2 instance
+* SSHing means to SSH into an EC2 instance that allows you to control a remote machine, all using the command line 
+* Keypair name is needed to SSH into the instance... this is decided when launching an instance  
+
+Steps:
+* first you launch an ec2 instance from aws console
+* while launching the ec2 instance, you attach a key to it, while attaching , you specify if u want a ppk or a pem file
+* a ppk file can be directly opened from putty, a pem file needs to be opened by putty gen and then converted to a ppk file
+* to open the instance access in CLI (putty), open putty, put in ec2-user@ public IP of the instance and also load the ppk key saved in SSH-auth-credentials
+* open to launch the instance  
 * 
