@@ -343,5 +343,17 @@ Steps:
 * while launching the ec2 instance, you attach a key to it, while attaching , you specify if u want a ppk or a pem file
 * a ppk file can be directly opened from putty, a pem file needs to be opened by putty gen and then converted to a ppk file
 * to open the instance access in CLI (putty), open putty, put in ec2-user@ public IP of the instance and also load the ppk key saved in SSH-auth-credentials
-* open to launch the instance  
-* 
+* open to launch the instance
+* do whoami and see the username (ec2-user)  
+
+### Windows 
+for windows, use powershell, type ssh and press enter, see if you get something, if u do, ssh works (and I do)  
+navigate to the directory with the key file (file downloaded after making the instance  
+
+Videos 40 + - are videos o connect in linux, windows shell, ec2 connect amazon service putty etc  
+
+### EC2 buying
+* on demand instances
+* reserved (1 & 3 years) 
+* savings plan
+* spot instances 
