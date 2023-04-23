@@ -353,7 +353,32 @@ navigate to the directory with the key file (file downloaded after making the in
 Videos 40 + - are videos o connect in linux, windows shell, ec2 connect amazon service putty etc  
 
 ### EC2 buying
-* on demand instances
-* reserved (1 & 3 years) 
-* savings plan
-* spot instances 
+* on demand instances (billing per min for windows / linux or per hour for other OS - has highest cost but no upfront payment - no long term commitment - suitable for short uninterrupted load where we cannot predict)
+* reserved (1 & 3 years) (upto 72% discount compared to on-demand - u specify certain things such as instance type, OS , region, time, pay upfront, partially upfront, no upfront, - recommended for steady state usage such as data base and can also buy sell resources in marketplace incase they aren't needed anymore. convertible reserve also exist but discount upto 66% 
+* savings plan ( discount based on long term  upto 72%, but u commit to a certain type such as 10$ / hour for 1-3 years but anything above this, u pay the ondemand price, these are locked to certain region and family,  but some flexibilities) 
+* spot instances  (upto 90% discount compared to on-demand but u can lose ur instance at any time if ur max price is below current spot price, good for batch jobs, data analysis, image processing any distributed work load) , not suitable for databases or critical jobs (important for exam)  
+* dedicated hosts (physical server with ec2 instance capacity, fully dedicated to our use, allows compliance requriements, and use existing server bound software licenses (per socket, per core, VM software licenses), purchasing (on demand [pay per second] or reserve 1-3 years [no upfront, full upfront, partial] [most expensive option] useful for softwares with complicated license model (BYOL), or company needing strong regulartory / compliance needs 
+* dedicates instances (instances run on hardware dedicated to you,  [may share hardware with other instances in the same account] 
+* capacity reservations (reserve ondemand instances in a specific AZ [availability zone] for any duration, no time commitment (create / cancel anytime), no billing discount, combine with regional reserved instances or savings to benefit from billing , ur charged on demand rate whether u run instances or not  suitable for short time uninterrupted loads  
+
+### EC2 spot instances requests
+* to cancel spot instances first cancel the spot request where you have mentioned how many instances etc u need otherwise, after terminating instance, AWS will start another
+* so cancel the request, then terminate instances 
+
+#### Spot fleets
+* spot fleet = set of spot instances + (optional) on demand instances  
+* spot fleet will try its best to meet target capacity with price contraints  
+  * define possible launch pools 
+  * can have multiple pools so the fleet can choose 
+  * spot fleet stops when max budget / capacity reached 
+* strategies to allocate spot instances 
+  * lowest price : from the pool with lowest price (cost optimization / short workload) 
+  * diversified: distributed across all pools (great for availability / long workload) 
+  * capacity optimized: pool with right capacity for number of instances  
+
+* spot fleet allows us to automatically request spot instances with lowest price
+
+#### EC2 instances launch types 
+
+### End of section 5
+
