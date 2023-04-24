@@ -382,3 +382,67 @@ Videos 40 + - are videos o connect in linux, windows shell, ec2 connect amazon s
 
 ### End of section 5
 
+## Section 6
+### Private vs Public IP (IPv4)
+* Networking has two sorts of IPs. IPv4 and IPv6
+  * IPv4 = 4 numbers seperated by dots 1.160.10.240
+  * IPv6:3ffe: 1900:4545:3:200:f8ff:fe21:67cf
+* AWS has support for IPv6, it is newer, solves problem for IoT 
+* IPv4 allows for 3.7 billion different addresses (almost running out) in public space
+* IPv4 [0-255].[0-255].[0-255].[0-255] , each number can range from 0 - 255
+* public IP must be unique across the whole web (no two machines can have same IP) 
+* only a specific range of IPs can be used as private IP  
+
+#### Elastic IP
+* if you need to have a fixed public IP for your instance, you need an elastic IP  
+* its a public IPv4 and u own it as long as u don't delete it  
+* you can attach it to one instance at a time  
+* with elastic IP, u can mask failure of an instance / software by rapidly remapping the address to another instance in ur account 
+* you can only have 5 elastic IPs (u can ask amazon for more) 
+* overall try to avoid elastic IP 
+* use random public ip and register a DNS name to it  
+* use a load balancer and not use public IP (maybe the best)  
+* you buy / reserve an elastic IP, you assign it to an instance, u keep the elastic IP and u can use it to access the instance  
+* now the public ip = elastic ip, if u stop the instance, the Ip is still retained, if u start it, it is still retained because it is elastic IP 
+* disassociate elastic IP from instance and then release it 
+
+#### Placement Group Partitions 
+* Partitions are hardware racks so if u distribute, u save urself from failure of racks  
+* upto 7 partitions per AZ 
+* upto 100s of EC2 instances 
+* instances in a partition do not share the rack with instances in other partitions (so safer)
+* a partition failure can affeect many instances but it wont affect other partitions 
+* ec2 instances get access to partition information using metadata service 
+* HDFS, Hbase, Cassandra, kafka .... Big data applications that are aware of these things perhaps  
+
+#### Placement Group HandsON
+* three strategies are (cluster, spread , partition)
+* now when u launch an instance, in advanced settings, u have a placement group name setting
+
+#### Elastic Network Interfaces (ENI)
+* Logical component in a virtual private cloud (VPC) that represents a virtual network card 
+* ENI has following attributes
+  *  Primary Private IPv4 + one or more secondary IPv4
+  *  One Public IPv4
+  *  One or more security groups
+  *  A MAC address
+ * you can create ENI independently and attach them on the fly (move them) on EC2 instances for failover
+ * Bound to specific AZ
+
+#### Elastic Network Interfaces (ENII) Hands On
+
+#### EC2 Hibernate
+* Stop = data kept
+* terminate = any EBS volume set up to be destroyed, is lost
+* On start, OS boots, and EC2 user script runs, then OS boots up, application starts, caches get warmed up, and that can take time
+* with hibernate an instance, the RAM memory is preserved, (this is faster), whatever is in RAM is written in a file in the root EBS
+* the root EBS must be encrypted  
+* use case: long running processes without stopping, booting up fast (if services take time to initialize, etc)  
+* supported instances are C3,C4...I3,M3,R3,R4,T2,T3 .. others , instance ram size <150 GB, instance size is not supported for bare metal instances, AMI (Amazon linux 2, Linux, Ubuntu Windows ... ) 
+* root volume must be EBS encrypted, not instance store and large 
+* available for ondemand- reserve - spot 
+* an instance cannot be hibernated for more than 60 days (current limit) 
+* uptime = tells how long an instance has been on (in terminal of AWS / linux)  
+
+## Section 7
+
