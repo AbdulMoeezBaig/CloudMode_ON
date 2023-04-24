@@ -445,4 +445,32 @@ Videos 40 + - are videos o connect in linux, windows shell, ec2 connect amazon s
 * uptime = tells how long an instance has been on (in terminal of AWS / linux)  
 
 ## Section 7
+#### EBS overview
+* EBS = Elastic Block Store 
+* It is a network drive that you attach to your instances while they run
+* allows instances to persist data even after their termination 
+* they can only be mounted to once instance at a time (at the CCP level) but there is multi attach feature for some EBS
+* they are bound to specific availability zones
+* EBS volumes can be attached detached quickly to EC2 instances  
+* a volume cannot be moved across an AZ but we can take a snapshot of it to move it 
+* IOPS = IO operations for a second  
+* 2 EBS valumes can be attached to a single EC2 instance also
+* Delete on termination attribute : by default, it is ticked for the root volume and not ticket for the new volume 
+* ^ this controls what happens when an instance is deleted.  But we can control it  
 
+#### EBS HandsOn
+if the EBS volume attached to an instance is remove on termination then if u terminate the instance, the EBS volume also disappears. By default, this setting for root EBS (when an EBS instance is initiated, is set to yes i.e. delete on termination)
+
+#### EBS Snapshots
+* makes a backup of EBS volume at a point in time
+* not necessary to detach volume for snapshot but recommended
+* can copy snapshots across AZ or regions 
+* therefore EBS volume can be transferred using Snapshots from one AZ / region to another 
+  * EBS snapshot achieve
+    * it is 75% cheaper but takes 24 - 72 hours to restore the archieve 
+  * Recycle bin for snapshots
+    * setup to retain deleted snapshots, u can recover them after accidental deletion where retention time can be specified from 1 day - 1 year 
+  * fast snapshot restore
+    * forces full initialization of snapshot to have no latency on first use (but will be expensive)  
+   
+* 
