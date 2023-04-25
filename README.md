@@ -473,4 +473,22 @@ if the EBS volume attached to an instance is remove on termination then if u ter
   * fast snapshot restore
     * forces full initialization of snapshot to have no latency on first use (but will be expensive)  
    
+
+#### AMI handson
+* u can create an image by starting an EC2 instance and then right click and create image
+* inside the image, you can install apache server etc, what this dones is, when an instance is started on this  AMI, the apache or other security software(s) if necessary, are already installed and the user script just needs to use them and makes booting time much faser. 
+* People also make and sell AMi on the marketlpace 
+
+#### EC2 instance store
+EC2 instance store refers to the hard drive attached to the physical server 
+* gives better IO performance
+* Ec2 instance stores lose their storage if they are stored, this is called ephemeral storage  
+* this means that this is not a durable storage option so this can be used for buffer, cache, temporary data  
+* incase underlyng server of ec2 server fails, u do get data loss  
+* backups and replicables are ur responsibility
+
+* Examically, if high IO read writes are written (in millions), maybe it is because of local attachmenets to server (local EC2 store)  
+
+#### EBS volume types
+6 types
 * 
