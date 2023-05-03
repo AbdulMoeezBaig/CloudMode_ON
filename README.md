@@ -492,3 +492,4 @@ EC2 instance store refers to the hard drive attached to the physical server
 #### EBS volume types
 6 types
 * 
+####  section 8 REDO... 
